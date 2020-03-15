@@ -5,14 +5,14 @@ Desafio para processo seletivo do cargo de QA Analyst da Neon Pagamntos.
 ## Automação de Testes
   Para automatizar os cenários propostos no desafio, foram utilizados:
   
-  ### Automação WEB)
+  ### Automação WEB
   - Ruby;
   - Selenium-Webdriver;
   - cucumber;
   - Capybara;
   - SitePrism.
   
-   ### Automação WEB)
+   ### Automação API
   - Ruby;
   - Selenium-Webdriver;
   - cucumber;
