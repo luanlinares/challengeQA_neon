@@ -17,9 +17,9 @@ Então("devo visualizar a resposta correta para a pergunta") do
 end
   
 Quando("acesso as informações para abertura de conta PJ") do
-
+    page.access_pj_info
 end
   
 Então("devo visualizar a relação de documentos necessários para abertura da conta") do
-
+    page.access_docs_list
 end

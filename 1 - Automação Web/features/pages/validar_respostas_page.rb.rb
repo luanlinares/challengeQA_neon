@@ -1,8 +1,9 @@
 class QuestionPage < SitePrism::Page
     element :open_question, 'a[href="perguntas/artigo/360019117253-quero-cancelar-minha-conta-como-fao"]'
+    element :pj_link, '#header > div > div > section > nav > ul > li:nth-child(2) > a'
     element :open_account, 'a[class="button button--small bg-amarelo"]'
     element :list, 'button[class="button hollow"]'
-    element :docs, '#signup-documents-panel-content-2-label'
+    element :partner_docs, '#signup-documents-panel-content-2-label'
     
 
     def valid_page
@@ -30,22 +31,19 @@ class QuestionPage < SitePrism::Page
 
  
     def access_pj_info
-         head = all('li[ class="header__nav-list-item"]')
-         head.count
-         head[1].click
-         
+        pj_link.click
     end
  
     def access_docs_list
-       open_account.click
-          new_window = window_opened_by do
-             open_account.click
-          end
-             within_window new_window do
+        page.has_title?('Conta Digital PJ: grátis pelo app para MEI ou ME')
+        new_page = window_opened_by do
+            open_account.click
+        end
+            within_window new_page do
                 list.click
-                docs.click
-          end     
+                partner_docs.click
+                page.has_text?('São válidos os documentos RG, CNH ou RNE (no caso de estrangeiros).')
+            end   
     end
- 
  end
  

@@ -1,6 +1,5 @@
 #language: pt
 
-@question
 Funcionalidade: Validar respostas da página de perguntas
 Eu como usuário quero verificar as respostas de algumas perguntas para obter informações da conta Neon. 
 
