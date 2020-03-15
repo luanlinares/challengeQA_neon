@@ -1,5 +1,5 @@
 # Desafio QA Neon
-Desafio para processo seletivo do cargo de QA Analyst da Neon Pagamntos.
+Desafio para processo seletivo do cargo de QA Analyst da Neon Pagamentos.
  
 
 ## Automação de Testes
