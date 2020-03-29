@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 Before do
-    visit "https://neon.com.br/" 
-    Capybara.page.driver.browser.manage.window.maximize
+  visit 'https://neon.com.br/'
+  Capybara.page.driver.browser.manage.window.maximize
 end
 
-After do  
-    Capybara.current_session.driver.quit
+After do
+  Capybara.current_session.driver.quit
 end
